@@ -1,6 +1,4 @@
-package com.in28minutes.learnspringframework;
-
-import com.in28minutes.learnspringframework.game.GamingConsole;
+package com.in28minutes.learnspringframework.game;
 
 public class PacManGame implements GamingConsole{
 
