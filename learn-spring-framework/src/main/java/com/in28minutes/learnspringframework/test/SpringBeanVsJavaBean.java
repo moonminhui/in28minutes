@@ -53,3 +53,5 @@ public class SpringBeanVsJavaBean {
 		System.out.println(pojo);
 	}
 }
+
+// git test
