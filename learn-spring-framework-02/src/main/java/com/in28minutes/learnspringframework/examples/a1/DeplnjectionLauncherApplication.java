@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
 @Component
 class YourBusinessClass {
 	
-	// '필드 주입'을 사용한 자동 와이어링
+	// 1. '필드 주입'을 사용한 자동 와이어링
 	Dependency1 dependency1;
 	
 	Dependency2 dependency2;
 
-	// Generate Constructor using Fields - '생성자 주입'을 사용한 자동 와이어링
+	// 2. Generate Constructor using Fields - '생성자 주입'을 사용한 자동 와이어링
 	@Autowired
 	public YourBusinessClass(Dependency1 dependency1, Dependency2 dependency2) {
 		super();
@@ -25,7 +25,7 @@ class YourBusinessClass {
 		this.dependency2 = dependency2;
 	}
 
-	// Generate Setter and Getter - '수정자 주입'을 사용한 자동 와이어링
+	// 3. Generate Setter and Getter - '수정자 주입'을 사용한 자동 와이어링
 //	@Autowired
 //	public void setDependency1(Dependency1 dependency1) {
 //		System.out.println("Setter Injection - setDependency1");

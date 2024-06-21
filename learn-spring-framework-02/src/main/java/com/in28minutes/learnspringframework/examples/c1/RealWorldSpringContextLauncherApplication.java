@@ -1,4 +1,4 @@
-package com.in28minutes.learnspringframework.examples.a0;
+package com.in28minutes.learnspringframework.examples.c1;
 
 import java.util.Arrays;
 
@@ -8,20 +8,19 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan
-public class SimpleContextLauncherApplication {
-
+public class RealWorldSpringContextLauncherApplication {
+	
 	public static void main(String[] args) {
-
 		try (var context = 
 				new AnnotationConfigApplicationContext
-				(SimpleContextLauncherApplication.class)) {
+				(RealWorldSpringContextLauncherApplication.class)) {
 			
-			// Spring 컨텍스트에서 어떤 Bean이 쓰였는지 확인하는 방법
 			Arrays.stream(context.getBeanDefinitionNames())
-				.forEach(System.out::println);
-
+			.forEach(System.out::println);
+			
+			// BusinessCalculationService를 얻고 이에 대한 메소드를 실행
+			System.out.println(context.getBean(BusinessCalculationService.class).findMax());
 		}
-
 	}
 
 }
